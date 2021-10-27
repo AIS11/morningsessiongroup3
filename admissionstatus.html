@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>admission status</title>
+</head>
+<body>
+    <h1>CHECK YOUR ADMISSION STATUS</h1>
+    <p id="message"></p>
+    <input type="Number" placeholder="enter your jamb score" id="jambscore"><br><br>
+
+    <button onclick="adds()">check</button>
+
+    <script>
+    function adds() {
+       var jambscore = document.getElementById("jambscore").value 
+       if(jambscore >= 180 && jambscore <= 400){
+           document.getElementById("message").innerHTML = "Congratulations!! you are elligible for admission"
+       }  
+
+       else if(jambscore < 180 && jambscore > 0)  {
+        document.getElementById("message").innerHTML = "Sorry you are not elligible for admission"
+           
+       }
+      else if(jambscore == "0") { 
+        document.getElementById("message").innerHTML = "are you sure you wrote jamb"
+       }
+       else if(jambscore > 400) {
+        document.getElementById("message").innerHTML = "please enter a valid jamb score"
+       }
+       else{
+        document.getElementById("message").innerHTML = "GET OUT"
+       }
+    }
+
+    </script>
+</body>
+</html>

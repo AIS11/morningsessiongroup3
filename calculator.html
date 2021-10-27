@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1> CALCULATOR</h1>
+    <input type="number" placeholder="first number" name="" id="firstnumber" required>
+    <input type="number" placeholder="second number" id="secondnumber" required>
+    <input type="number" placeholder="answer" id="answer" required readonly><br><br>
+    <button onclick="adds()">+</button>
+    <button onclick="add()">/</button>
+    <button onclick="ad()">-</button>
+    <BUtton onclick="D()">%</BUtton>
+    <BUtton onclick="M()">*</BUtton>
+    <script>
+        function adds() {
+            var firstnumber = document.getElementById("firstnumber").value
+            var secondnumber = document.getElementById("secondnumber").value
+            var answer = Number(firstnumber) + Number(secondnumber)
+            document.getElementById("answer").value = answer
+        } 
+
+        function add() {
+            var firstnumber = document.getElementById("firstnumber").value
+            var secondnumber = document.getElementById("secondnumber").value
+            var answer = Number(firstnumber) / Number(secondnumber)
+            document.getElementById("answer").value = answer
+        }
+
+        function ad() {
+            var firstnumber = document.getElementById("firstnumber").value
+            var secondnumber = document.getElementById("secondnumber").value
+            var answer = Number(firstnumber) - Number(secondnumber)
+            document.getElementById("answer").value = answer
+        }
+
+        function D() {
+            var firstnumber = document.getElementById("firstnumber").value
+            var secondnumber = document.getElementById("secondnumber").value
+            var answer = Number(firstnumber) % Number(secondnumber)
+            document.getElementById("answer").value = answer
+        }
+
+        function M() {
+            var firstnumber = document.getElementById("firstnumber").value
+            var secondnumber = document.getElementById("secondnumber").value
+            var answer = Number(firstnumber) * Number(secondnumber)
+            document.getElementById("answer").value = answer
+        }
+
+    </script>
+</body>
+</html>
