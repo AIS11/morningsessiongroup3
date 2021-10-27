@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+    <div>
+        <p>SELECT COUNTRY</p>
+        <select name="" id="come" onchange="adds()">
+            <option value=""></option>
+            <option value="nigeria">nigeria</option>
+            <option value="america">america</option>
+            <option value="france">france</option>
+        </select>
+    </div>
+
+    <div id="dark" >
+        <p>Select state</p>
+        <select name="">
+            <option value=""></option>
+            <option value="benue">benue</option>
+            <option value="abuja">abuja</option>
+            <option value="kogi">kogi</option>
+            <option value="kano">kano</option> 
+        </select>
+    </div>
+
+    <div id="light" >
+            <p>Select state</p>
+            <select name="" >
+            <option value=""></option>
+            <option value="los-angeles">los-angeles</option>
+            <option value="washington">washington</option>
+            <option value="new yoke">new yoke</option>
+            <option value="atlanta">atlanta</option>
+        </select>
+    </div>
+
+    <div  id="bright">
+        <p>Select state</p>
+        <select name="">
+            <option value="paris">paris</option>
+            <option value="rome">rome</option>
+        </select>
+    </div>
+
+    <script>
+            document.getElementById("dark").style.display = "none"
+            document.getElementById("light").style.display = "none"
+            document.getElementById("bright").style.display = "none"
+
+        function adds(){
+            var come = document.getElementById("come").value
+            if(come == "nigeria"){
+                document.getElementById("dark").style.display = "block"
+                document.getElementById("light").style.display = "none"
+                document.getElementById("bright").style.display = "none"
+
+            }
+            else if(come == "america"){
+                document.getElementById("light").style.display = "block"
+                document.getElementById("dark").style.display = "none"
+                document.getElementById("bright").style.display = "none"
+
+            }
+            else if(come === "france"){
+                document.getElementById("light").style.display = "none"
+                document.getElementById("dark").style.display = "none"
+                document.getElementById("bright").style.display = "block"
+
+            }
+        }
+
+    </script>
+</body>
+</html>

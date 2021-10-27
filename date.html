@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body onload="display()" id="com">
+<h1>DATE AND TIME</h1>
+<p id="message"></p>
+        <button onclick="red('red')">red</button>
+        <button onclick="red('blue')">blue</button>
+        <button onclick="red('green')">green</button>
+       
+
+    <script >
+      
+        function daterefresh(){
+            var number = 1000
+            var timeout = setTimeout("display()",number)
+        }
+        function display() {
+            const  date = new Date()
+            document.getElementById("message").innerHTML = date 
+            daterefresh()
+        }
+
+        function red(color){
+            
+            document.getElementById("com").style.backgroundColor = color
+        }
+    </script>
+</body>
+</html>
